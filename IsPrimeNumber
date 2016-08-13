@@ -1,0 +1,28 @@
+public static bool IsNumPrime(int n)
+	{
+		if(n<=1)
+			return false;
+		
+		if(n==2)
+			return true;
+		
+		if(n%2 == 0)
+			return false;
+		
+		for (int i=3; i<=Convert.ToInt32(Math.Sqrt(n)); i++)
+		{
+			if(n%3 == 0)
+				return false;
+		}
+		
+		int k = 3;
+		while(k<=Convert.ToInt32(Math.Sqrt(n)))
+		{
+			if(n%k == 0)
+				return false;
+			
+			k += 2;
+		}
+		
+		return true;
+	}
