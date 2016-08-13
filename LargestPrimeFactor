@@ -1,0 +1,9 @@
+public static long biggestPrimeFactor(long num) {
+    for (int div = 2; div < num; div++) {
+        if (num % div == 0) {
+            num = num/div;
+            div--;
+        }
+    }
+    return num;
+}
